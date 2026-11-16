@@ -48,6 +48,9 @@ start index.html
 python -m http.server 8000
 # Sau đó truy cập http://localhost:8000
 ```
+## Các mốc phiên bản (Tags)
+- **v7**: Mốc hoàn thiện các tính năng chính và cấu trúc ban đầu.
+- **v8**: Phiên bản hoàn thiện cuối cùng nộp bài tập lớn.
 
 ## 📝 Form đăng ký thành viên
 

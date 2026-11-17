@@ -2,65 +2,98 @@
 
 > **We love and we do** — Trang web giới thiệu CLB Kết Nối, câu lạc bộ tình nguyện trực thuộc Học viện Nông nghiệp Việt Nam.
 
+---
+
+## 📌 Thông tin bài tập lớn
+- **Môn học:** Lập trình Web và Triển khai phần mềm (Khóa 20)
+- **Học phần quy trình:** A3: Từ ý tưởng đến bàn giao (Khoa CNTT - Đại Nam)
+- **Sinh viên thực hiện:** Nguyễn Huy Hoàng — Thành viên CLB Kết Nối
+- **Kho lưu trữ (Repository):** [https://github.com/hoangnguyen27a/BTL_LAPTRINHWED](https://github.com/hoangnguyen27a/BTL_LAPTRINHWED)
+- **Đường link chạy thực tế (GitHub Pages):** [https://hoangnguyen27a.github.io/BTL_LAPTRINHWED/](https://hoangnguyen27a.github.io/BTL_LAPTRINHWED/)
+- **Phiên bản gắn Tag bàn giao:** `v8` (hoàn thiện nộp bài)
+
+---
+
 ## 📖 Giới thiệu
+Đây là **bài tập lớn môn Lập trình Web**, xây dựng một trang web tĩnh (static website) giới thiệu CLB Kết Nối — nơi hội tụ những trái tim nhiệt huyết, chung tay sẻ chia yêu thương và thực hiện các hoạt động tình nguyện vì cộng đồng sinh viên và xã hội.
 
-Đây là **bài tập lớn môn Lập trình Web** (khóa 20), xây dựng một trang web tĩnh (static website) giới thiệu CLB Kết Nối — nơi hội tụ những trái tim nhiệt huyết, chung tay sẻ chia yêu thương và thực hiện các hoạt động tình nguyện vì cộng đồng sinh viên và xã hội.
+---
 
-## 🗂️ Cấu trúc dự án
+## 🗂️ Cấu trúc dự án theo chuẩn A3
 
 ```
 BTL_LAP TRINH WED/
-├── index.html      # Trang chủ (HTML ngữ nghĩa, có chú thích tiếng Việt)
-├── style.css       # Toàn bộ định dạng giao diện (responsive)
+├── index.html            # Trang chủ HTML5 ngữ nghĩa, tối ưu responsive
+├── style.css             # Định dạng giao diện toàn trang (CSS Variables, Flexbox, Grid)
 ├── assets/
-│   └── img/        # Hình ảnh (logo CLB, ...)
-├── AI_LOG.md       # Nhật ký quá trình làm việc với AI
-└── README.md       # Tài liệu này
+│   └── img/
+│       └── logo.png      # Logo chính thức của CLB Kết Nối
+├── docs/                 # Tài liệu quy trình kỹ thuật phần mềm (A3)
+│   ├── yeu-cau.md        # Bước 1 & 2: Xác định chủ đề, 4 câu hỏi cốt lõi, phạm vi
+│   ├── thiet-ke.md       # Bước 3: Thiết kế có lý do, Wireframe Desktop & Mobile
+│   ├── kiem-thu.md       # Bước 5: Báo cáo kiểm thử "Thử thật, ghi thật" (Test Cases)
+│   └── san-pham.md       # Bước 4 & 6: Mô tả sản phẩm hoàn thiện và hướng dẫn bàn giao
+├── evidence/             # Minh chứng kiểm tra được (Screenshots)
+│   ├── 01_yeu_cau/       # Minh chứng 4 câu hỏi & AI prompt
+│   ├── 02_thiet_ke/      # Minh chứng bản vẽ Wireframe & Rationale
+│   ├── 03_kiem_thu/      # Minh chứng các ca test thực tế (Responsive, Form, W3C)
+│   ├── 04_trien_khai/    # Minh chứng Git log tags, repo & URL GitHub Pages
+│   └── README.md         # Mục lục chi tiết các minh chứng
+├── AI_LOG.md             # Nhật ký quá trình sử dụng AI có kiểm soát
+└── README.md             # Hướng dẫn tổng quan dự án này
 ```
+
+---
 
 ## ✨ Các phần chính của trang web
 
 | Phần | ID | Nội dung |
 |---|---|---|
-| Hero | `#top` | Banner giới thiệu với logo CLB và nút kêu gọi hành động |
-| Giới thiệu | `#gioi-thieu` | Về CLB và 3 giá trị cốt lõi: Tâm huyết, Đoàn kết, Trách nhiệm |
-| Hoạt động | `#hoat-dong` | Thu gom phế liệu, thu gom quần áo cũ, bán hoa quyên góp |
-| Lịch sinh hoạt | `#lich` | Bảng lịch họp và hoạt động hàng tuần |
-| Cơ cấu tổ chức | `#co-cau` | Sơ đồ Ban Chủ nhiệm, các ban chức năng và thành viên |
-| Tuyển thành viên | `#tuyen-thanh-vien` | Quy trình tham gia + form đăng ký có kiểm tra dữ liệu |
-| Liên hệ | `#lien-he` | Email, điện thoại, fanpage |
+| Header | `#top` | Thanh điều hướng dính cố định (sticky), logo và 6 menu liên kết |
+| Hero | `#top` | Banner lớn giới thiệu logo CLB và 2 nút kêu gọi hành động (CTA) |
+| Giới thiệu | `#gioi-thieu` | Lịch sử CLB và 3 giá trị cốt lõi: Tâm huyết, Đoàn kết, Trách nhiệm |
+| Hoạt động | `#hoat-dong` | 3 thẻ card: Thu gom phế liệu, Thu gom quần áo cũ, Bán hoa quyên góp |
+| Lịch sinh hoạt | `#lich` | Bảng lịch họp và hoạt động (hỗ trợ cuộn ngang trên điện thoại `.table-wrap`) |
+| Cơ cấu tổ chức | `#co-cau` | Sơ đồ phân cấp 4 tầng: Chủ nhiệm → Phó/Ủy viên → 3 Ban → Thành viên |
+| Tuyển thành viên | `#tuyen-thanh-vien` | Quy trình 3 bước + form đăng ký có kiểm tra tính hợp lệ dữ liệu |
+| Liên hệ | `#lien-he` | Email, điện thoại, fanpage CLB |
+| Footer | N/A | Bản quyền, thông tin sinh viên thực hiện, nút cuộn về đầu trang |
+
+---
 
 ## 🛠️ Công nghệ sử dụng
+- **HTML5:** Ngữ nghĩa (`header`, `nav`, `main`, `section`, `table`, `footer`), hỗ trợ tiếp cận (skip link, `aria-label`, `scope`).
+- **CSS3:** Bố cục Flexbox và Grid responsive, hệ biến CSS `:root`, hiệu ứng mượt mà.
+- **JavaScript thuần (Vanilla JS):** Kiểm tra bắt buộc nhập và số điện thoại regex `/^[0-9]{10,11}$/`, phản hồi trực quan.
 
 - **HTML5** — ngữ nghĩa, có chú thích chi tiết bằng tiếng Việt, hỗ trợ tiếp cận (skip link, `aria-label`, `scope`).
 - **CSS3** — bố cục responsive, hiển thị tốt trên điện thoại và máy tính.
 - **JavaScript thuần (vanilla JS)** — xử lý form đăng ký thành viên: kiểm tra số điện thoại (10–11 chữ số) và hiển thị thông báo thành công.
 
-## 🚀 Cách chạy
+## 🚀 Cách chạy dự án
 
-Không cần cài đặt gì, chỉ cần mở file `index.html` bằng trình duyệt:
-
+### Cách 1: Chạy trực tiếp trên trình duyệt
+Mở file `index.html` bằng trình duyệt web bất kỳ:
 ```powershell
-# Cách 1: Mở trực tiếp
 start index.html
-
-# Cách 2: Dùng Live Server (VS Code) hoặc chạy server tĩnh
-python -m http.server 8000
-# Sau đó truy cập http://localhost:8000
 ```
-## Các mốc phiên bản (Tags)
-- **v7**: Mốc hoàn thiện các tính năng chính và cấu trúc ban đầu.
-- **v8**: Phiên bản hoàn thiện cuối cùng nộp bài tập lớn.
 
-## 📝 Form đăng ký thành viên
+### Cách 2: Xem qua máy chủ tĩnh (Live Server)
+```powershell
+python -m http.server 8000
+# Mở trình duyệt truy cập: http://localhost:8000
+```
 
-Form thu thập: Họ tên, Lớp, Khóa học, Mã sinh viên, Số điện thoại. Các trường đều bắt buộc, số điện thoại được kiểm tra bằng regex `/^[0-9]{10,11}$/`. Hiện tại dữ liệu chỉ được xử lý phía client (hiển thị thông báo thành công) — có thể mở rộng kết nối backend hoặc Google Form sau.
+### Cách 3: Xem bản trực tuyến công khai (GitHub Pages)
+Truy cập trực tiếp: [https://hoangnguyen27a.github.io/BTL_LAPTRINHWED/](https://hoangnguyen27a.github.io/BTL_LAPTRINHWED/)
 
-## 👤 Thành viên thực hiện
+---
 
-- **Quản trị web:** Nguyễn Huy Hoàng — Thành viên CLB Kết Nối
-- Môn học: Lập trình Web và triển khai phần mềm, khóa 20
+## 🏷️ Các mốc phiên bản (Tags)
+- **`v7`**: Mốc hoàn thiện các chức năng cơ bản và cấu trúc ban đầu.
+- **`v8`**: Phiên bản hoàn thiện quy trình A3, bổ sung đầy đủ tài liệu `docs/`, minh chứng `evidence/` và triển khai GitHub Pages.
+
+---
 
 ## 📄 Bản quyền
-
-© 2026 CLB Kết Nối – Học viện Nông nghiệp Việt Nam. Trang web phục vụ học tập.
+© 2026 CLB Kết Nối – Học viện Nông nghiệp Việt Nam. Dự án bài tập lớn phục vụ học tập.

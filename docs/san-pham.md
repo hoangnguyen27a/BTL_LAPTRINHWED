@@ -79,12 +79,12 @@ Không dùng framework, thư viện ngoài hay CDN.
 
 ```
 BTL_LAP TRINH WED/
-├── index.html          # Trang chủ duy nhất (432 dòng)
+├── index.html          # Trang chủ duy nhất (435 dòng)
 ├── style.css           # Giao diện toàn trang
 ├── assets/
 │   └── img/
 │       └── logo.png    # Logo CLB Kết Nối
-├── docs/               # Tài liệu dự án
+├── docs/               # Tài liệu dự án (yeu-cau, thiet-ke, kiem-thu, san-pham, BAO_CAO_BTL_A3)
 ├── evidence/           # Ảnh chụp minh chứng
 ├── AI_LOG.md           # Nhật ký sử dụng AI
 └── README.md           # Hướng dẫn dự án

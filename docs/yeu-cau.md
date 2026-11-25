@@ -83,7 +83,7 @@
 - Các trường bắt buộc: Họ và tên, Lớp, Khóa học, Mã sinh viên, Số điện thoại.
 - Kiểm tra số điện thoại: chỉ chấp nhận 10–11 chữ số.
 - Khi gửi thành công: ẩn form, hiện thông báo cảm ơn.
-- Khi số điện thoại sai định dạng: hiện `alert` thông báo lỗi.
+- Khi số điện thoại sai định dạng: trình duyệt chặn bằng `pattern` HTML5 và có lớp kiểm tra dự phòng `alert` bằng JS.
 
 ---
 

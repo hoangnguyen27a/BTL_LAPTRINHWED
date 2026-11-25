@@ -712,6 +712,11 @@ button:focus-visible {
 /* --- Màn hình nhỏ (điện thoại): tối đa 520px --- */
 @media (max-width: 520px) {
 
+  /* Bù chiều cao header khi menu xuống nhiều dòng trên mobile */
+  html {
+    scroll-padding-top: 120px;
+  }
+
   /* Header: căn giữa cả logo lẫn menu */
   .header-inner {
     justify-content: center;

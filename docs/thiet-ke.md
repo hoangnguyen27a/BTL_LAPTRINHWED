@@ -37,7 +37,7 @@ Trang web gồm một file HTML duy nhất (`index.html`) với bố cục theo 
 
 Màu được định nghĩa qua CSS variables trong `:root`, áp dụng nhất quán toàn trang:
 
-| Biến | Gi Vai trò |
+| Biến | Giá trị | Vai trò |
 |---|---|---|
 | `--mau-xanh` | `#3058a8` | Màu chủ đạo (nút, link, header) |
 | `--mau-xanh-dam` | `#203888` | Hover state, nhấn mạnh |
@@ -63,34 +63,34 @@ Màu được định nghĩa qua CSS variables trong `:root`, áp dụng nhất 
 
 ### 4.1 Header
 - `position: sticky; top: 0` — dính đầu trang khi cuộn.
-- Nền xanh chủ đạo (`--mau-xanh`), chữ trắng.
-- Flexbox căn chỉnh logo trái, nav phải.
+- Nền trắng (`#fff`), viền dưới vàng 3px (`--mau-vang`), chữ xanh đậm (`--mau-xanh-dam`).
+- Flexbox căn chỉnh logo trái, nav phải (tự căn giữa xuống dòng trên màn hình hẹp).
 
 ### 4.2 Nút bấm (Button)
-- `.btn-primary`: nền vàng (`--mau-vang`), chữ tối — dùng cho CTA chính.
+- `.btn-primary`: nền vàng (`--mau-vang`), chữ xanh đậm (`--mau-xanh-dam`) — dùng cho CTA chính.
 - `.btn-ghost`: viền trắng, nền trong suốt — dùng trên nền tối (hero).
 
 ### 4.3 Card hoạt động
-- 3 thẻ `<article class="card">` đặt trong `.cards` (CSS Grid 3 cột trên desktop).
-- Bo góc `--bo-goc`, đổ bóng nhẹ, nền trắng.
+- 3 thẻ `<article class="card">` đặt trong `.cards` (CSS Grid: 1 cột trên mobile, 2 cột trên tablet, 3 cột trên desktop).
+- Bo góc `--bo-goc` (14px), viền xám nhạt (`--mau-vien`), viền vàng 4px trên đầu (`--mau-vang`), nền trắng.
 - Trên điện thoại tự động xếp 1 cột.
 
 ### 4.4 Bảng lịch sinh hoạt
-- Bọc trong `.table-wrap` có `overflow-x: auto` để cuộn ngang trên màn hình nhỏ.
-- `<thead>` nền xanh, chữ trắng; hàng xen kẽ màu nền nhạt.
+- Bọc trong `.table-wrap` có `overflow-x: auto` để cuộn ngang trên màn hình nhỏ (`table { min-width: 520px; }`).
+- `<th>` tiêu đề cột nền xanh (`--mau-xanh`), chữ trắng; viền ô đồng bộ (`--mau-vien`).
 - `<th scope="col">` và `<caption>` đảm bảo tính tiếp cận.
 
 ### 4.5 Sơ đồ cơ cấu tổ chức
-- 4 hàng `.org-level` xếp bằng Flexbox, căn giữa.
-- `.role-top` (Chủ nhiệm): viền màu vàng nhấn, nổi bật nhất.
-- `.role-pho` (Phó chủ nhiệm): viền xanh đậm.
-- `.role-ban` (3 ban chức năng): đồng đều, nền nhạt.
+- 4 hàng `.org-level` xếp bằng CSS Grid (`display: grid`), tự co 1 cột trên mobile và mở rộng 2–3 cột trên tablet/desktop.
+- `.role-top` (Chủ nhiệm): nền xanh đậm (`--mau-xanh-dam`), chữ trắng, tên `.ten-noi-bat` nền vàng nổi bật nhất.
+- `.role-pho` (Phó chủ nhiệm): nền xanh nhạt (`#eef2fc`), viền xanh 2px (`--mau-xanh`), tên nền xanh đậm.
+- `.role-ban` (3 ban chức năng): đồng đều 3 cột, viền vàng 4px trên đầu.
 
 ### 4.6 Form đăng ký
 - Mỗi trường dùng `.form-nhom`: `<label>` trên, `<input>` dưới.
-- Viền input đổi sang xanh khi focus.
+- Viền input đổi sang xanh và có hào quang focus nhẹ khi chọn.
 - Trường bắt buộc có `<span class="bat-buoc">*</span>` màu đỏ.
-- Nút gửi full-width trên di động.
+- Nút gửi rộng 100% khung form (`.btn-gui { width: 100%; }`).
 
 ---
 
@@ -98,9 +98,9 @@ Màu được định nghĩa qua CSS variables trong `:root`, áp dụng nhất 
 
 | Breakpoint | Áp dụng cho |
 |---|---|
-| `min-width: 640px` (tablet) | Cards chuyển sang 2 cột, form rộng hơn |
-| `min-width: 960px` (desktop) | Cards 3 cột, sơ đồ org đầy đủ ngang |
-| `max-width: 520px` (mobile) | Nav ẩn hoặc thu gọn, padding giảm |
+| `min-width: 640px` (tablet) | Cards và bước quy trình chuyển sang 2 cột, cơ cấu tổ chức 2–3 cột, `.form-box` tối đa 480px |
+| `min-width: 960px` (desktop) | Hero chia 2 cột (`auto 1fr`), Cards 3 cột, Liên hệ 3 cột ngang |
+| `max-width: 520px` (mobile) | Header & nav căn giữa xuống dòng gọn gàng, tăng `scroll-padding-top: 120px`, giảm padding section & form |
 
 ---
 
@@ -117,7 +117,8 @@ BTL_LAP TRINH WED/
 │   ├── yeu-cau.md      # Tài liệu yêu cầu
 │   ├── thiet-ke.md     # Tài liệu này
 │   ├── san-pham.md     # Mô tả sản phẩm
-│   └── kiem-thu.md     # Kết quả kiểm thử
+│   ├── kiem-thu.md     # Kết quả kiểm thử
+│   └── BAO_CAO_BTL_A3.md # Báo cáo tổng hợp Rubric A3
 ├── evidence/           # Ảnh chụp màn hình minh chứng
 ├── AI_LOG.md           # Nhật ký sử dụng AI
 └── README.md           # Hướng dẫn dự án

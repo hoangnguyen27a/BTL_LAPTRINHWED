@@ -32,7 +32,8 @@ BTL_LAP TRINH WED/
 │   ├── yeu-cau.md        # Bước 1 & 2: Xác định chủ đề, 4 câu hỏi cốt lõi, phạm vi
 │   ├── thiet-ke.md       # Bước 3: Thiết kế có lý do, Wireframe Desktop & Mobile
 │   ├── kiem-thu.md       # Bước 5: Báo cáo kiểm thử "Thử thật, ghi thật" (Test Cases)
-│   └── san-pham.md       # Bước 4 & 6: Mô tả sản phẩm hoàn thiện và hướng dẫn bàn giao
+│   ├── san-pham.md       # Bước 4 & 6: Mô tả sản phẩm hoàn thiện và hướng dẫn bàn giao
+│   └── BAO_CAO_BTL_A3.md # Báo cáo tổng hợp theo Rubric A3 của học phần
 ├── evidence/             # Minh chứng kiểm tra được (Screenshots)
 │   ├── 01_yeu_cau/       # Minh chứng 4 câu hỏi & AI prompt
 │   ├── 02_thiet_ke/      # Minh chứng bản vẽ Wireframe & Rationale
@@ -65,10 +66,6 @@ BTL_LAP TRINH WED/
 - **HTML5:** Ngữ nghĩa (`header`, `nav`, `main`, `section`, `table`, `footer`), hỗ trợ tiếp cận (skip link, `aria-label`, `scope`).
 - **CSS3:** Bố cục Flexbox và Grid responsive, hệ biến CSS `:root`, hiệu ứng mượt mà.
 - **JavaScript thuần (Vanilla JS):** Kiểm tra bắt buộc nhập và số điện thoại regex `/^[0-9]{10,11}$/`, phản hồi trực quan.
-
-- **HTML5** — ngữ nghĩa, có chú thích chi tiết bằng tiếng Việt, hỗ trợ tiếp cận (skip link, `aria-label`, `scope`).
-- **CSS3** — bố cục responsive, hiển thị tốt trên điện thoại và máy tính.
-- **JavaScript thuần (vanilla JS)** — xử lý form đăng ký thành viên: kiểm tra số điện thoại (10–11 chữ số) và hiển thị thông báo thành công.
 
 ## 🚀 Cách chạy dự án
 
